@@ -369,16 +369,16 @@
 
 
 // exo-19-asynchrone promisse all
- var resolvedPromisesArray =[Promise.resolve(44), Promise.resolve(45)];
+//  var resolvedPromisesArray =[Promise.resolve(44), Promise.resolve(45)];
 
- var p = Promise.all(resolvedPromisesArray);
- console.log(p);
+//  var p = Promise.all(resolvedPromisesArray);
+//  console.log(p);
 
- setTimeout(function(){
-  console.log("La case et vide");
-  console.log(p);
+//  setTimeout(function(){
+//   console.log("La case et vide");
+//   console.log(p);
 
- });
+//  });
  // Cela affichera dans la console (et dans cet ordre) :
 // Promise { <state>: "pending" }
 // La pile est vide
@@ -388,7 +388,105 @@
 
 
 
+//exo-20-Promise.allSettled()
 
+// const promise1 = Promise.resolve(3);
+// const promise2 = new Promise((resolve, reject) =>
+//   setTimeout(reject, 100, "foo"),
+
+// );
+
+// const promises = [promise1, promise2];
+
+// Promise.allSettled(promises).then((results) =>
+//   results.forEach((result) => console.log(result.status)),
+// );
+
+
+// // Expected output:
+// // "fulfilled"
+// // "rejected"
+
+// exo-21-Promise.any()
+
+// const promise1 = Promise.reject(0);
+// const promise2 = new Promise((resolve) => setTimeout(resolve, 100, "quick"));
+// const promise3 = new Promise((resolve) => setTimeout(resolve, 500, "slow"));
+
+// const promises = [promise1, promise2, promise3];
+
+// Promise.any(promises).then((value) => console.log(value));
+
+// // Expected output: "quick"
+
+
+// exo-22-
+// const pErr = new Promise((resolve, reject) => {
+//   reject("J'échoue toujours");
+// });
+
+// const pLente = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 500, "Éventuellement résolue");
+// });
+
+// const pRapide = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 100, "Rapidement résolue");
+// });
+
+// Promise.any([pErr, pLente, pRapide]).then((valeur) => {
+//   console.log(valeur);
+//   // pRapide s'est résolue en premier
+// });
+// // résultat attendu : "Rapidement résolue"
+
+// exo-23
+// const promise1 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 500, "one");
+// });
+
+// const promise2 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 100, "two");
+// });
+
+// Promise.race([promise1, promise2]).then((value) => {
+//   console.log(value);
+//   // Both resolve, but promise2 is faster
+// });
+
+// exo-24
+// const promise1 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 500, "one");
+// });
+
+// const promise2 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 100, "two");
+// });
+
+// Promise.race([promise1, promise2]).then((value) => {
+//   console.log(value);
+//   // Both resolve, but promise2 is faster
+// });
+
+// exo-25
+// const promise1 = Promise.resolve(3);
+// const promise2 = new Promise((resolve, reject) =>
+//   setTimeout(reject, 100, "foo"),
+// );
+// const promises = [promise1, promise2];
+
+// Promise.allSettled(promises).then((results) =>
+//   results.forEach((result) => console.log(result.status)),
+// );
+
+// // Expected output:
+// // "fulfilled"
+// // "rejected"
+
+exo-26
+
+const promis10 = Promise.resolve(3);
+const promise20 = new Promise((resolve,reject) =>
+  setTimeout(reject, 100, "alloooooooooo
 
 
 

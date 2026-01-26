@@ -70,7 +70,6 @@
 //   console.log(promise1);
   // Expected output: [object Promise]
 
-//exo-04-Promisse
 
 
   
