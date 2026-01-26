@@ -17,13 +17,60 @@
 // test();
 // console.log(age);
 
-function parent(){
-let message="Bonjour";
-function enfant(){
-console.log(message);
+// function parent(){
+// let message="Bonjour";
+// function enfant(){
+// console.log(message);
 
-}
-enfant();
-}
+// }
+// enfant();
+// }
 
-parent();
+// parent();
+
+
+// exo-01
+
+// console.log("A");
+// console.log("B");
+// console.log("C");
+
+
+// exo-02
+
+// function calcul() {
+//     return 10 * 2;
+//   }
+  
+//   let resultat = calcul();
+//   console.log(resultat);
+//   console.log("Fin du programme");
+  
+
+// function calcul(){
+//     return 40 * 3;
+// }
+
+// let resultat = calcul();
+// console.log(resultat);
+// console.log('Fin du programme');
+
+// exo-03-Promisse
+// const promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("coucou");
+//     }, 300);
+//   });
+  
+//   promise1.then((value) => {
+//     console.log(value);
+//     // Expected output: "foo"
+//   });
+  
+//   console.log(promise1);
+  // Expected output: [object Promise]
+
+//exo-04-Promisse
+
+
+  
