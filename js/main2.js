@@ -467,16 +467,354 @@
 // exo-25-reject
 
 
+// function verifierAge(age) {
+//   if (age < 18) {
+//     return Promise.reject("Mineur interdit");
+//   }
+//   return Promise.resolve("Accès autorisé");
+// }
+
+// verifierAge(16)
+//   .then(res => console.log(res))
+//   .catch(err => console.log(err));
+
+// exo-26-reject
+// Promise.reject(new Error("échec")).then(
+//   function () {
+//     // n'est pas appelée
+//   },
+//   function (erreur) {
+//     console.log(erreur); // Analyse de la pile d'appels
+//   },
+// );
+
+// Exo-26
+//  Promise.reject(new Error("échec")).then(
+//   function () {
 
 
+//   },
+//   function (erreur){
+//     console.log(erreur);
+//   },
+
+//  );
+
+// exo-27-Promise réussie immédiatement 
+// let p = Promise.resolve("Succès");
+
+// p.then(result => {
+//   console.log(result); // Succès
+// });
 
 
+// exo-28-async/await
+
+// async function test() {
+//   return "Hello";
+// }
+
+// test().then(console.log); // Hello
 
 
+// example
+// async function test(){
+//   return "Test entrer";
+// } 
+// test().then(console.log);//hello
+
+// exo-29
+
+// Promise.resolve("Succès").then(
+//   function (valeur) {
+//     console.log(valeur); // "Succès"
+//   },
+//   function (valeur) {
+//     // n'est pas appelée
+//   },
+// );
+
+// // example
+// async function test(){
+//     return "Test valeur";
+// }
+// test().then(console.log);
 
 
+// exo-30
+// Promise.resolve("Succès").then(
+//   function (valeur) {
+//     console.log(valeur); // "Succès"
+//   },
+//   function (valeur) {
+//     // n'est pas appelée
+//   },
+// );
+
+// example-
+// Promise.resolve("Très bien ").then(
+//   function (valeur){
+//       console.log(valeur);// Succès
+//   },
+//   function (valeur){
+
+//   },
 
 
+// );
+
+// exo-31-Promise Resolve
+
+// Promise.resolve("OK")
+//   .then(result => console.log(result)); // OK
 
 
+// example
+// Promise.resolve("Ok")
+//   .then(result => console.log(result));
 
+// exo-32-fonction promise 
+// function getData(isReady) {
+//   if (isReady) return Promise.resolve("Données prêtes");
+//   return Promise.reject("Erreur");
+// }
+// example
+// function getData(isready) {
+// if (isready) return Promise.resolve("Données prètes");
+// return Promise.reject("Erreur");
+
+// }
+// // exo-33-Promise try
+// Promise.try(func)
+// Promise.try(func, arg1)
+// Promise.try(func, arg1, arg2)
+// Promise.try(func, arg1, arg2, /* …, */ argN)
+
+//Example 
+
+
+// exo-33-Promise try 
+
+// Promise.try(() => {
+//   if (Math.random() > 0.5) {
+//     throw new Error("Erreur synchrone");
+//   }
+//   return "Succès";
+// })
+// .then(result => console.log(result))
+// .catch(err => console.log(err.message));
+
+// exo-33-Promise try 
+// Promise.try(() => {
+//   if (Math.random() > 0.5) {
+//     throw new Error("Erreur synchrone");
+//   }
+//   return "Succès";
+// })
+// .then(result => console.log(result))
+// .catch(err => console.log(err.message));
+
+// exo-34-javascript-native
+// Promise.resolve()
+//   .then(() => {
+//     if (Math.random() > 0.5) {
+//       throw new Error("Erreur");
+//     }
+//     return "OK";
+//   })
+//   .then(console.log)
+//   .catch(console.log);
+
+// example
+// Promise.resolve()
+// .then(() => {
+//     if (Math.random() > 0.5){
+//       throw new Error("Error");
+//   }
+//   return "OK";
+
+// }) 
+//   .then(console.log)
+//   .catch(console.log);
+
+
+// exo-35- Asyn / await
+// async function run() {
+//   try {
+//     if (Math.random() > 0.5) {
+//       throw new Error("Erreur");
+//     }
+//     return "Succès";
+//   } catch (e) {
+//     console.log(e.message);
+//   }
+// }
+
+// example
+
+// async function run() {
+//   try {
+//     if (Math.random() > 0.5){
+//       throw new Error("Erreur");
+//     }
+//     return "Succès";
+//    } catch(e){
+//     console.log(e.message);
+
+//    }
+
+// }
+
+
+//exo-using try-Promise
+// function doSomething(action) {
+//   return Promise.try(action)
+//     .then((result) => console.log(result))
+//     .catch((error) => console.error(error))
+//     .finally(() => console.log("Done"));
+// }
+
+// doSomething(() => "Sync result");
+
+// doSomething(() => {
+//   throw new Error("Sync error");
+// });
+
+// doSomething(async () => "Async result");
+
+// doSomething(async () => {
+//   throw new Error("Async error");
+// });
+
+// example 
+
+
+// exo-35
+// function doSomething(action) {
+//   return Promise.try(action)
+//     .then((result) => console.log(result))
+//     .catch((error) => console.error(error))
+//     .finally(() => console.log("Done"));
+// }
+
+// doSomething(() => "Sync result");
+
+// doSomething(() => {
+//   throw new Error("Sync error");
+// });
+
+// doSomething(async () => "Async result");
+
+// doSomething(async () => {
+//   throw new Error("Async error");
+// });
+
+// exo-36-Promise catch
+// const p = new Promise((resolve, reject) => {
+//   reject("Erreur réseau");
+// });
+
+// p.catch(err => {
+//   console.log(err); // "Erreur réseau"
+// });
+
+//exo-37-Promise-then and catch
+// fetch("https://api.example.com/data")
+//   .then(res => res.json())
+//   .then(data => console.log(data))
+//   .catch(err => console.error("Erreur :", err));
+
+// exo-38
+// function checkMail() {
+//   return new Promise((resolve, reject) => {
+//     if (Math.random() > 0.5) {
+//       resolve("Mail has arrived");
+//     } else {
+//       reject(new Error("Failed to arrive"));
+//     }
+//   });
+// }
+
+// checkMail()
+//   .then((mail) => {
+//     console.log(mail);
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   })
+//   .finally(() => {
+//     console.log("Experiment completed");
+//   });
+ 
+  // // exo-39
+
+  // const promise1 = new Promise((resolve, reject) => {
+  //   resolve("Success!");
+  // });
+  
+  // promise1.then((value) => {
+  //   console.log(value);
+  //   // Expected output: "Success!"
+  // });
+
+  // example
+
+  // const Promise2 = new Promise((resolve,reject) => {
+  //   resolve("Succes !");
+  
+  // });
+
+  // promise1.then((values) => {
+  //   console.log(value);
+  // }
+
+  // exo-40
+  // new Promise(function(resolve, reject) {
+
+  //   setTimeout(() => resolve(1), 1000);
+  
+  // }).then(function(result) {
+  
+  //   alert(result); // 1
+  
+  //   return new Promise((resolve, reject) => { // (*)
+  //     setTimeout(() => resolve(result * 2), 1000);
+  //   });
+  
+  // }).then(function(result) { // (**)
+  
+  //   alert(result); // 2
+  
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => resolve(result * 2), 1000);
+  //   });
+  
+  // }).then(function(result) {
+  
+  //   alert(result); // 4
+  
+  // });
+
+//exo41-Primitives
+
+// let john = {
+//   name: "John",
+//   sayHi: function() {
+//     alert("Hi buddy!");
+//   }
+// };
+
+// john.sayHi(); // Hi buddy!
+
+//example
+
+// let john = {
+//   name: "John",
+//   sayHi: function() {
+//     alert("hi Booby")
+      
+//   }
+
+// };
+
+// john.sayHi();

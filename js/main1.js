@@ -7,7 +7,7 @@
 
 // afficher();
 
-//Scope de bloc
+// Scope de bloc
 
 // function test(){
 
@@ -55,7 +55,7 @@
 // console.log(resultat);
 // console.log('Fin du programme');
 
-// exo-03-Promisse
+// exo-30-Promisse
 // const promise1 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
 //       resolve("coucou");
@@ -68,7 +68,7 @@
 //   });
   
 //   console.log(promise1);
-  // Expected output: [object Promise]
+//   Expected output: [object Promise]
 
 
 
