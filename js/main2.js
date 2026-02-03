@@ -818,3 +818,145 @@
 // };
 
 // john.sayHi();
+
+
+//Methode nombre-methode toString
+
+// let num = 255;
+// alert( num.toString(16) );
+// alert( num.toString(2) );
+
+
+//***************************Map et Set***************************
+
+// new Map() – créer la map.
+// map.set(key, value) – stocke la valeur par la clé.
+// map.get(key) – renvoie la valeur par la clé, undefined si key n’existe pas dans la map.
+// map.has(key) – retourne true si la key existe, false sinon.
+// map.delete(key) – supprime l’élément (la paire clé/valeur) par la clé.
+// map.clear() – supprime tout de la map.
+// map.size – renvoie le nombre d’éléments actuel.
+
+
+// let map = new Map();
+
+// map.set('1', 'str1');
+// map.set(1, 'num1');
+// map.set(true, 'bool1');
+
+// alert( map.get(1) );
+// alert( map.get('1') );
+// alert( map.size );
+
+
+//litération dans Map
+
+// let recipeMap = new Map();
+// map.set('1', 'str1');
+// map.set(1, 'num');
+// map.set(true, 'bool1');
+
+
+
+// alert( map.get(1) );
+// alert( map.get('1') );
+// alert( map.size );
+
+
+//Objet à partir d'une map
+
+// "use strict";
+
+// let map = new Map();
+// map.set('banana', 1);
+// map.set('orange', 2);
+// map.set('meat', 4);
+
+// let obj = Object.fromEntries(map.entries()); // créer un objet simple (*)
+
+
+// obj = { banana: 1, orange: 2, meat: 4 }
+
+// alert(obj.orange); // 2
+
+
+
+// Map and Set-intération 
+
+// let john = { name: "John" };
+// let ben = { name: "Ben" };
+
+// let visitsCountObj = {}; // on créé notre object
+
+// visitsCountObj[ben] = 234; // essayez d'utiliser l'objet ben comme clé
+// visitsCountObj[john] = 123; // essayez d'utiliser l'objet john comme clé, l'objet ben sera remplacé
+
+// // C'est ce qui a été écrit!
+// alert( visitsCountObj["[object Object]"] ); // 123
+
+ 
+//Objet map
+
+
+// let john = { name:"Tojo"};
+// let ben = { name: "Ben"};
+
+// let visitsCountObj = {};
+// visitsCountObj[ben] = 234; 
+// visitsCountObj[john] = 123;
+
+// alert( visitsCountObj["[object Object]"] ); // 123
+
+//Itération dans Map
+// let recipeMap = new Map([
+//   ['Hamburger', 500],
+//   ['tomatoes', 300],
+//   ['Banana', 400],
+//   ['Pomme', 200],
+//   ['Fraise', 100],
+
+// ]);
+//   for (let vegetable of recipeMap.keys()){
+//     alert(vegetable);
+
+//   }
+
+//   for (let amount of recipeMap.values()) {
+//     alert(amount);
+
+
+//   }
+  
+//   for (let entry of recipeMap){
+//     alert(entry);
+
+//   }
+
+
+//SET-
+// new Map() – créer la map.
+// map.set(key, value) – stocke la valeur par la clé.
+// map.get(key) – renvoie la valeur par la clé, undefined si key n’existe pas dans la map.
+// map.has(key) – retourne true si la key existe, false sinon.
+// map.delete(key) – supprime l’élément (la paire clé/valeur) par la clé.
+// map.clear() – supprime tout de la map.
+// map.size – renvoie le nombre d’éléments actuel.
+
+  let set = new Set();
+
+  let john = { name: "John" };
+  let Pete = {name: "Pete"};
+  let Mary = { name: "Mary" };
+
+  set.add(john);
+  set.add(Mary);
+  set.add(Pete);
+  set.add(john);
+  set.add(Mary);
+
+  alert( set.size );
+
+  for (let user of set) {
+    alert(user.name);
+
+  }
